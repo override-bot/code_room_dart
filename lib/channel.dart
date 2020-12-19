@@ -1,4 +1,5 @@
 import 'package:code_room_dart/controller/posts_controller.dart';
+import 'package:code_room_dart/controller/comments_controller.dart';
 import 'code_room_dart.dart';
 
 class CodeRoomDartChannel extends ApplicationChannel {
@@ -24,6 +25,10 @@ class CodeRoomDartChannel extends ApplicationChannel {
     router
       .route("/posts/[:id]")
       .link(() => postsController(context));
+
+     router
+      .route("/comments/[:id]")
+      .link(() => commentController(context));
 
     return router;
   }
