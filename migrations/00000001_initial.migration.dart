@@ -13,6 +13,12 @@ class Migration1 extends Migration {
   Future downgrade() async {}
   
   @override
-  Future seed() async {}
+  Future seed() async {
+    await database.store.execute(
+      "INSERT INTO _POST (displayName, conversation) VALUES (zilla, i hate this)"
+      
+
+      );
+  }
 }
     

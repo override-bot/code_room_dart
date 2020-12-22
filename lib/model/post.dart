@@ -7,6 +7,7 @@ class _Post{
   @primaryKey
   int id;
   String displayName;
+  String imageUrl;
   String conversation;
   @Column(indexed: true)
   DateTime postDate;
